@@ -1,0 +1,4 @@
+"main.obj",
+".\Uart.obj" 
+TO "GiaoTiepVDK_N" 
+RAMSIZE(256) 

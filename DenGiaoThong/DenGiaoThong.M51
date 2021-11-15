@@ -1,0 +1,245 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/14/2021  12:49:36  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\PROGRAM FILES \KEIL4\C51\BIN\BL51.EXE main.obj, .\delay.obj TO DenGiaoThong
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  .\delay.obj (DELAY)
+  D:\PROGRAM FILES \KEIL4\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\PROGRAM FILES \KEIL4\C51\LIB\C51S.LIB (?C?UIDIV)
+  D:\PROGRAM FILES \KEIL4\C51\LIB\C51S.LIB (?C?SIDIV)
+  D:\PROGRAM FILES \KEIL4\C51\LIB\C51S.LIB (RAND)
+
+
+LINK MAP OF MODULE:  DenGiaoThong (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0007H     UNIT         _DATA_GROUP_
+            DATA    000FH     0004H     UNIT         ?DT?RAND?RAND
+            IDATA   0013H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     009FH     UNIT         ?PR?_DISPLAY?MAIN
+            CODE    00A2H     009EH     UNIT         ?PR?MAIN?MAIN
+            CODE    0140H     008BH     UNIT         ?C?LIB_CODE
+            CODE    01CBH     004DH     UNIT         ?PR?RAND?RAND
+            CODE    0218H     0024H     UNIT         ?PR?_DELAY_MS?MAIN
+            CODE    023CH     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    025CH     000FH     UNIT         ?PR?RANDOM?MAIN
+            CODE    026BH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0277H     000AH     UNIT         ?CO?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   DenGiaoThong (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  0008H    0005H
+  +--> ?PR?_DISPLAY?MAIN
+  +--> ?PR?_DELAY_MS?MAIN
+  +--> ?PR?RANDOM?MAIN
+
+?PR?_DISPLAY?MAIN              000DH    0002H
+  +--> ?CO?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/14/2021  12:49:36  PAGE 2
+
+
+  +--> ?PR?_DELAY_MS?MAIN
+
+?PR?RANDOM?MAIN                -----    -----
+  +--> ?PR?RAND?RAND
+
+
+
+IGNORED SYMBOLS:
+   _DELAY_MS
+
+
+
+SYMBOL TABLE OF MODULE:  DenGiaoThong (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00B0H         PUBLIC        P3
+  C:025CH         PUBLIC        random
+  B:0090H.0       PUBLIC        P1_0
+  B:00A0H.0       PUBLIC        P2_0
+  B:0090H.1       PUBLIC        P1_1
+  B:00A0H.1       PUBLIC        P2_1
+  B:0090H.2       PUBLIC        P1_2
+  B:00A0H.2       PUBLIC        P2_2
+  B:00A0H.3       PUBLIC        P2_3
+  C:00A2H         PUBLIC        main
+  C:021CH         PUBLIC        _Delay_ms
+  C:0277H         PUBLIC        Code7Seg
+  C:0003H         PUBLIC        _Display
+  C:0218H         SYMBOL        L?0040
+  -------         PROC          L?0039
+  -------         ENDPROC       L?0039
+  C:0218H         SYMBOL        L?0040
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:021CH         LINE#         19
+  C:021CH         LINE#         23
+  C:0226H         LINE#         24
+  C:0226H         LINE#         25
+  C:0234H         LINE#         26
+  C:023BH         LINE#         28
+  -------         ENDPROC       _DELAY_MS
+  -------         PROC          _DISPLAY
+  D:000DH         SYMBOL        digit
+  C:0003H         LINE#         30
+  C:0007H         LINE#         31
+  C:0007H         LINE#         33
+  C:001CH         LINE#         34
+  C:001EH         LINE#         35
+  C:0021H         LINE#         36
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/14/2021  12:49:36  PAGE 3
+
+
+  C:0023H         LINE#         37
+  C:0032H         LINE#         39
+  C:004BH         LINE#         40
+  C:004DH         LINE#         41
+  C:0050H         LINE#         42
+  C:0052H         LINE#         43
+  C:0061H         LINE#         45
+  C:007AH         LINE#         46
+  C:007CH         LINE#         47
+  C:007FH         LINE#         48
+  C:0081H         LINE#         50
+  C:009AH         LINE#         51
+  C:009CH         LINE#         52
+  C:009FH         LINE#         53
+  C:00A1H         LINE#         55
+  -------         ENDPROC       _DISPLAY
+  -------         PROC          RANDOM
+  C:025CH         LINE#         57
+  C:025CH         LINE#         58
+  C:025CH         LINE#         59
+  C:026AH         LINE#         60
+  -------         ENDPROC       RANDOM
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:000AH         SYMBOL        j
+  D:000CH         SYMBOL        status
+  -------         ENDDO         
+  C:00A2H         LINE#         62
+  C:00A2H         LINE#         63
+  C:00A2H         LINE#         64
+  C:00ABH         LINE#         65
+  C:00AEH         LINE#         67
+  C:00AEH         LINE#         68
+  C:00AEH         LINE#         69
+  C:00B3H         LINE#         70
+  C:00B3H         LINE#         71
+  C:00BAH         LINE#         72
+  C:00CBH         LINE#         73
+  C:00CEH         LINE#         74
+  C:00D5H         LINE#         75
+  C:00D8H         LINE#         76
+  C:00D8H         LINE#         77
+  C:00DBH         LINE#         78
+  C:00DEH         LINE#         79
+  C:00DEH         LINE#         80
+  C:00DEH         LINE#         81
+  C:00E1H         LINE#         82
+  C:00E8H         LINE#         83
+  C:00EBH         LINE#         84
+  C:00EBH         LINE#         85
+  C:00EEH         LINE#         86
+  C:00F1H         LINE#         87
+  C:00F1H         LINE#         88
+  C:00F1H         LINE#         89
+  C:00F4H         LINE#         90
+  C:00FBH         LINE#         91
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/14/2021  12:49:36  PAGE 4
+
+
+  C:00FEH         LINE#         92
+  C:00FEH         LINE#         93
+  C:0101H         LINE#         94
+  C:0104H         LINE#         95
+  C:0104H         LINE#         96
+  C:0104H         LINE#         97
+  C:0109H         LINE#         98
+  C:0113H         LINE#         99
+  C:0117H         LINE#         100
+  C:0121H         LINE#         102
+  C:0128H         LINE#         103
+  C:013DH         LINE#         104
+  C:013DH         LINE#         106
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:023CH         PUBLIC        _Delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:023CH         LINE#         3
+  C:023CH         LINE#         4
+  C:023CH         LINE#         6
+  C:0246H         LINE#         7
+  C:0246H         LINE#         8
+  C:0254H         LINE#         9
+  C:025BH         LINE#         10
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        ?C?UIDIV
+  C:0140H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?SIDIV
+  C:0195H         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        RAND
+  D:000FH         PUBLIC        ?SRAND?BYTE
+  C:01CBH         PUBLIC        RAND
+  C:020DH         PUBLIC        _SRAND
+  -------         ENDMOD        RAND
+
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY_MS
+    MODULE:  .\delay.obj (DELAY)
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+
+Program Size: data=20.0 xdata=0 code=641
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/14/2021  12:49:36  PAGE 5
+
+
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  1 ERROR(S)

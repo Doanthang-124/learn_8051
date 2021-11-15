@@ -1,0 +1,138 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/09/2020  09:01:02  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj TO SPI_slave RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  SPI_slave (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0019H     UNIT         ?PR?_SPI_WRITE_BYTE?MAIN
+            CODE    001CH     0015H     UNIT         ?PR?SPI_READ?MAIN
+            CODE    0031H     000EH     UNIT         ?PR?MAIN?MAIN
+            CODE    003FH     000CH     UNIT         ?C_C51STARTUP
+            CODE    004BH     0007H     UNIT         ?PR?SPI_INIT?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   SPI_slave (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?SPI_INIT?MAIN
+  +--> ?PR?SPI_READ?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  SPI_slave (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  B:00A0H.0       PUBLIC        P2_0
+  B:00A0H.1       PUBLIC        P2_1
+  B:00A0H.2       PUBLIC        P2_2
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/09/2020  09:01:02  PAGE 2
+
+
+  B:00A0H.3       PUBLIC        P2_3
+  C:0031H         PUBLIC        main
+  C:001CH         PUBLIC        SPI_Read
+  C:0003H         PUBLIC        _SPI_Write_Byte
+  C:004BH         PUBLIC        SPI_Init
+  -------         PROC          SPI_INIT
+  C:004BH         LINE#         8
+  C:004BH         LINE#         9
+  C:004BH         LINE#         10
+  C:004DH         LINE#         11
+  C:004FH         LINE#         12
+  C:0051H         LINE#         13
+  -------         ENDPROC       SPI_INIT
+  -------         PROC          _SPI_WRITE_BYTE
+  D:0007H         SYMBOL        b
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         15
+  C:0003H         LINE#         16
+  C:0003H         LINE#         18
+  C:0005H         LINE#         19
+  C:0005H         LINE#         21
+  C:0009H         LINE#         22
+  C:0009H         LINE#         23
+  C:000BH         LINE#         24
+  C:000DH         LINE#         26
+  C:000DH         LINE#         27
+  C:000FH         LINE#         28
+  C:000FH         LINE#         29
+  C:0011H         LINE#         30
+  C:0013H         LINE#         31
+  C:0017H         LINE#         32
+  C:001BH         LINE#         33
+  -------         ENDPROC       _SPI_WRITE_BYTE
+  -------         PROC          SPI_READ
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0007H         SYMBOL        b
+  -------         ENDDO         
+  C:001CH         LINE#         34
+  C:001CH         LINE#         35
+  C:001CH         LINE#         38
+  C:001EH         LINE#         39
+  C:001EH         LINE#         40
+  C:0022H         LINE#         41
+  C:0024H         LINE#         42
+  C:0027H         LINE#         43
+  C:002AH         LINE#         44
+  C:002CH         LINE#         45
+  C:0030H         LINE#         46
+  C:0030H         LINE#         47
+  -------         ENDPROC       SPI_READ
+  -------         PROC          MAIN
+  C:0031H         LINE#         48
+  C:0031H         LINE#         49
+  C:0031H         LINE#         50
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/09/2020  09:01:02  PAGE 3
+
+
+  C:0034H         LINE#         51
+  C:0036H         LINE#         52
+  C:003BH         LINE#         53
+  C:003DH         LINE#         54
+  C:003DH         LINE#         55
+  C:003DH         LINE#         57
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SPI_WRITE_BYTE?MAIN
+
+Program Size: data=9.0 xdata=0 code=82
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

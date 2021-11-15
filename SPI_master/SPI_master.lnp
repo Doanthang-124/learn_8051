@@ -1,0 +1,3 @@
+"main.obj" 
+TO "SPI_master" 
+RAMSIZE(256) 

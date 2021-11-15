@@ -1,0 +1,160 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/06/2020  23:18:54  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj, .\delay.obj TO DemSanPham RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  .\delay.obj (DELAY)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  DemSanPham (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0006H     UNIT         _DATA_GROUP_
+            IDATA   000EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     00E2H     UNIT         ?PR?_DISPLAY?MAIN
+            CODE    00E5H     0055H     UNIT         ?C?LIB_CODE
+            CODE    013AH     0028H     UNIT         ?PR?MAIN?MAIN
+            CODE    0162H     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    0182H     000CH     UNIT         ?C_C51STARTUP
+            CODE    018EH     000AH     UNIT         ?CO?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   DemSanPham (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  0008H    0004H
+  +--> ?PR?_DISPLAY?MAIN
+
+?PR?_DISPLAY?MAIN              000CH    0002H
+  +--> ?CO?MAIN
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  DemSanPham (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/06/2020  23:18:54  PAGE 2
+
+
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  B:00A0H.0       PUBLIC        P2_0
+  B:00A0H.1       PUBLIC        P2_1
+  B:00A0H.2       PUBLIC        P2_2
+  B:00A0H.3       PUBLIC        P2_3
+  B:00A0H.4       PUBLIC        P2_4
+  C:013AH         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  C:018EH         PUBLIC        Code7Seg
+  B:0088H.4       PUBLIC        TR0
+  C:0003H         PUBLIC        _Display
+  -------         PROC          _DISPLAY
+  D:000CH         SYMBOL        digit
+  C:0003H         LINE#         13
+  C:0007H         LINE#         14
+  C:0007H         LINE#         16
+  C:001CH         LINE#         17
+  C:001EH         LINE#         18
+  C:0025H         LINE#         19
+  C:0027H         LINE#         20
+  C:0036H         LINE#         22
+  C:004FH         LINE#         23
+  C:0051H         LINE#         24
+  C:0058H         LINE#         25
+  C:005AH         LINE#         26
+  C:0069H         LINE#         28
+  C:0082H         LINE#         29
+  C:0084H         LINE#         30
+  C:008BH         LINE#         31
+  C:008DH         LINE#         32
+  C:009CH         LINE#         34
+  C:00B5H         LINE#         35
+  C:00B7H         LINE#         36
+  C:00BEH         LINE#         37
+  C:00C0H         LINE#         39
+  C:00D9H         LINE#         40
+  C:00DBH         LINE#         41
+  C:00E2H         LINE#         42
+  C:00E4H         LINE#         44
+  -------         ENDPROC       _DISPLAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        high
+  D:0009H         SYMBOL        low
+  D:000AH         SYMBOL        number
+  -------         ENDDO         
+  C:013AH         LINE#         45
+  C:013AH         LINE#         46
+  C:013AH         LINE#         49
+  C:013DH         LINE#         50
+  C:0140H         LINE#         51
+  C:0142H         LINE#         53
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/06/2020  23:18:54  PAGE 3
+
+
+  C:0142H         LINE#         54
+  C:0142H         LINE#         55
+  C:0145H         LINE#         56
+  C:0148H         LINE#         57
+  C:014EH         LINE#         58
+  C:0155H         LINE#         59
+  C:0159H         LINE#         60
+  C:0160H         LINE#         61
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0162H         PUBLIC        _Delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:0162H         LINE#         3
+  C:0162H         LINE#         4
+  C:0162H         LINE#         6
+  C:016CH         LINE#         7
+  C:016CH         LINE#         8
+  C:017AH         LINE#         9
+  C:0181H         LINE#         10
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        ?C?UIDIV
+  C:00E5H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+Program Size: data=15.0 xdata=0 code=408
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,48 @@
+C51 COMPILER V9.01   MAIN                                                                  07/06/2020 19:18:15 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include"..\lib\Uart.h"
+   2          #include"..\lib\delay.h"
+   3          #include <REGX52.H>
+   4          
+   5          
+   6          
+   7          
+   8          void main()
+   9          {
+  10   1              char Data;
+  11   1              //unsigned char i;
+  12   1              Uart_Init();
+  13   1      
+  14   1      
+  15   1              while(1)
+  16   1              {
+  17   2                      Uart_Write_Text("Ki tu thuong nhap vao: ");
+  18   2                      while(Uart_Ready()==0);
+  19   2                      Data = Uart_Read_Mode1();
+  20   2                      Data = Data + 96;
+  21   2                      Uart_Write_Text("Ki tu thuong nhap vao: ");
+  22   2                      Uart_Write_Mode1(Data);
+  23   2                      
+  24   2              }
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     44    ----
+   CONSTANT SIZE    =     24    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

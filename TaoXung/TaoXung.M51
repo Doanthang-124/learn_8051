@@ -1,0 +1,57 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/17/2021  14:17:35  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\PROGRAM FILES\KEILC\C51\BIN\BL51.EXE main.obj TO TaoXung RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+
+
+LINK MAP OF MODULE:  TaoXung (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     004BH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  TaoXung (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  D:00A8H         SYMBOL        IE
+  C:0042H         SYMBOL        ISR_T1
+  C:0030H         SYMBOL        MAIN
+  C:004AH         SYMBOL        NEXT
+  D:00A0H         SYMBOL        P2
+  D:008DH         SYMBOL        TH1
+  D:008BH         SYMBOL        TL1
+  D:0089H         SYMBOL        TMOD
+  B:0088H.6       SYMBOL        TR1
+  C:0000H         LINE#         2
+  C:001BH         LINE#         4
+  C:0030H         LINE#         6
+  C:0032H         LINE#         7
+  C:0035H         LINE#         8
+  C:0038H         LINE#         9
+  C:003BH         LINE#         10
+  C:003EH         LINE#         11
+  C:0040H         LINE#         12
+  C:0042H         LINE#         13
+  C:0045H         LINE#         14
+  C:0048H         LINE#         15
+  C:004AH         LINE#         27
+  -------         ENDMOD        MAIN
+
+Program Size: data=8.0 xdata=0 code=75
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,80 @@
+C51 COMPILER V9.01   MAIN                                                                  09/14/2021 11:03:36 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Program Files \Keil4\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <REGX51.H>
+   2          int i, a;
+   3          sbit LED = P2^0;
+   4          sbit START = P1^0; 
+   5          
+   6          void Delay_ms(unsigned int t)
+   7          {
+   8   1              unsigned int x,y;
+   9   1              for(x = 0; x <t; x++)
+  10   1              {
+  11   2               for(y = 0; y < 123; y++);
+  12   2              }
+  13   1      }
+  14          
+  15          void main(void)
+  16          { 
+  17   1              int i;
+  18   1              while (1) 
+  19   1              { 
+  20   2              START = 1;
+  21   2              if (START == 0)
+  22   2              { 
+  23   3                      
+  24   3                      LED = 0;
+  25   3                      for( i = 0; i < 6; i++)
+  26   3                      {
+  27   4                      LED = ~LED;
+  28   4                      Delay_ms(500);
+  29   4                      }
+  30   3              }
+  31   2              else
+  32   2              {
+  33   3                      LED = 0;
+  34   3              }
+  35   2              }
+  36   1      }
+  37          
+  38          //void main(void)
+  39          //{ 
+  40          //      while (1) 
+  41          //      { 
+  42          //      START = 1;
+  43          //      a = START;
+  44          //      if (START == 0)
+  45          //      { 
+  46          //              LED = 1;
+  47          //              Delay_ms(200);
+  48          //      }
+  49          //      else
+  50          //      {
+  51          //              LED = 0;
+  52          //              Delay_ms(200);
+  53          //      }
+  54          //      }
+  55          //}
+C51 COMPILER V9.01   MAIN                                                                  09/14/2021 11:03:36 PAGE 2   
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     73    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

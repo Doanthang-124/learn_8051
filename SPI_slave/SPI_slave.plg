@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\Users\HP\dvThang\8051\SPI_slave\SPI_slave.uvproj
+Project File Date:  07/09/2020
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(31): error C141: syntax error near 'b'
+MAIN.C(41): error C202: 'SPI_CLK': undefined identifier
+MAIN.C(44): error C202: 'SPI_CLK': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(31): error C141: syntax error near 'b'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SPI_WRITE_BYTE?MAIN
+Program Size: data=9.0 xdata=0 code=78
+creating hex file from "SPI_slave"...
+"SPI_slave" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(51): error C202: 'SPI_CS': undefined identifier
+MAIN.C(53): error C202: 'SPI_CS': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SPI_WRITE_BYTE?MAIN
+Program Size: data=9.0 xdata=0 code=82
+creating hex file from "SPI_slave"...
+"SPI_slave" - 0 Error(s), 1 Warning(s).
